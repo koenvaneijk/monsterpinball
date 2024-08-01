@@ -1,0 +1,168 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/Flipper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Bumper.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/DeathZone.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Main.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/images/example.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 531.25, 56 )
+
+[node name="Main" type="Node2D"]
+position = Vector2( 540, 1202 )
+script = ExtResource( 4 )
+
+[node name="Playfield" type="Node2D" parent="."]
+
+[node name="Flippers" type="Node" parent="Playfield"]
+
+[node name="LeftFlipper" parent="Playfield/Flippers" instance=ExtResource( 1 )]
+position = Vector2( 389.599, 1653.15 )
+scale = Vector2( -1, 1 )
+flipper_side = "left"
+
+[node name="RightFlipper" parent="Playfield/Flippers" instance=ExtResource( 1 )]
+position = Vector2( 711.599, 1653.15 )
+flipper_side = "right"
+
+[node name="Bumpers" type="Node" parent="Playfield"]
+
+[node name="Bumper1" parent="Playfield/Bumpers" instance=ExtResource( 2 )]
+position = Vector2( 615.599, 476.146 )
+
+[node name="Bumper2" parent="Playfield/Bumpers" instance=ExtResource( 2 )]
+position = Vector2( 444.599, 542.146 )
+
+[node name="Bumper3" parent="Playfield/Bumpers" instance=ExtResource( 2 )]
+position = Vector2( 580.599, 661.146 )
+
+[node name="BallStart" type="Position2D" parent="Playfield"]
+position = Vector2( 11.5987, -658.854 )
+
+[node name="Ball" parent="Playfield" groups=["balls"] instance=ExtResource( 5 )]
+position = Vector2( -206.401, -14.8541 )
+
+[node name="Example" type="Sprite" parent="Playfield"]
+visible = false
+modulate = Color( 1, 1, 1, 0.0705882 )
+position = Vector2( 7.59869, -297.854 )
+scale = Vector2( 6.46418, 6.46418 )
+texture = ExtResource( 6 )
+
+[node name="Walls" type="Node" parent="Playfield"]
+
+[node name="LeftBottom" type="StaticBody2D" parent="Playfield/Walls"]
+position = Vector2( 550.599, 543 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Playfield/Walls/LeftBottom"]
+position = Vector2( -106, 960 )
+offset = Vector2( 106, -960 )
+polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Playfield/Walls/LeftBottom"]
+polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
+
+[node name="Outline" type="StaticBody2D" parent="Playfield/Walls"]
+position = Vector2( 550.599, 543 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Playfield/Walls/Outline"]
+polygon = PoolVector2Array( -254, 1185, -473, 1040, -473, 790, -464, 763, -449, 743, -422, 726, -369, 712, -365, 593, -360, 561, -350, 547, -333, 535, -361, 491, -401, 399, -443, 193, -456, 51, -451, -27, -388, -155, -271, -273, -61, -357, 167, -333, 320, -252, 440, -95, 457, 50, 441, 188, 379, 442, 329, 526, 341, 539, 354, 555, 365, 579, 362, 707, 401, 718, 440, 736, 448, 747, 456, 768, 466, 1046, 239, 1186, 539, 1183, 530, -538, -540, -538, -524, 1176 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Playfield/Walls/Outline"]
+position = Vector2( -4, 0 )
+polygon = PoolVector2Array( -254, 1185, -473, 1040, -473, 790, -464, 763, -449, 743, -422, 726, -369, 712, -365, 593, -360, 561, -350, 547, -333, 535, -361, 491, -401, 399, -443, 193, -456, 51, -451, -27, -388, -155, -271, -273, -61, -357, 167, -333, 320, -252, 440, -95, 457, 50, 441, 188, 379, 442, 329, 526, 341, 539, 354, 555, 365, 579, 362, 707, 401, 718, 440, 736, 448, 747, 456, 768, 466, 1046, 239, 1186, 539, 1183, 530, -538, -540, -538, -524, 1176 )
+
+[node name="RightBottom" type="StaticBody2D" parent="Playfield/Walls"]
+position = Vector2( 550.599, 543 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Playfield/Walls/RightBottom"]
+position = Vector2( -106, 960 )
+offset = Vector2( 106, -960 )
+polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Playfield/Walls/RightBottom"]
+polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Playfield/Walls"]
+position = Vector2( 539, 1201.85 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( -315, -657, -347, -608, -347, -541, -343, -450, -325, -376, -301, -320, -256, -237, -219, -272, -281, -377, -315, -487, -322, -588 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( -315, -657, -347, -608, -347, -541, -343, -450, -325, -376, -301, -320, -256, -237, -219, -272, -281, -377, -315, -487, -322, -588 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( 239, -279, 278, -246, 309, -291, 331, -345, 359, -412, 369, -531, 369, -643, 352, -733, 318, -787, 267, -844, 208, -894, 205, -786, 205, -732, 205, -657, 202, -617, 203, -552, 190, -497, 168, -464, 174, -440, 194, -429, 234, -504, 241, -578, 238, -622, 343, -634, 342, -547, 334, -496, 307, -389, 283, -346 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( 239, -279, 278, -246, 309, -291, 331, -345, 359, -412, 369, -531, 369, -643, 352, -733, 318, -787, 267, -844, 208, -894, 205, -786, 205, -732, 205, -657, 202, -617, 203, -552, 190, -497, 168, -464, 174, -440, 194, -429, 234, -504, 241, -578, 238, -622, 343, -634, 342, -547, 334, -496, 307, -389, 283, -346 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( -191, -775, -222, -716, -228, -670, -228, -624, -229, -562, -226, -501, -219, -460, -193, -409, -153, -380, -121, -371, -73, -424, -75, -454, -115, -503, -160, -549, -188, -591, -198, -631, -210, -678, -202, -717, -187, -727 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( -191, -775, -222, -716, -228, -670, -228, -624, -229, -562, -226, -501, -219, -460, -193, -409, -153, -380, -121, -371, -73, -424, -75, -454, -115, -503, -160, -549, -188, -591, -198, -631, -210, -678, -202, -717, -187, -727 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( -79, -888, -65, -906, -55, -904, -46, -888, -49, -811, -77, -796 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( -79, -888, -65, -906, -55, -904, -46, -888, -49, -811, -77, -796 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( 65, -927, 94, -929, 97, -860, 94, -847, 66, -845, 63, -858 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Playfield/Walls/StaticBody2D"]
+polygon = PoolVector2Array( 65, -927, 94, -929, 97, -860, 94, -847, 66, -845, 63, -858 )
+
+[node name="LeftBumper" type="StaticBody2D" parent="Playfield/Walls"]
+position = Vector2( 539, 1201.85 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="Playfield/Walls/LeftBumper"]
+polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Playfield/Walls/LeftBumper"]
+polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
+
+[node name="RightBumper" type="StaticBody2D" parent="Playfield/Walls"]
+position = Vector2( 539, 1201.85 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="Playfield/Walls/RightBumper"]
+position = Vector2( 8, -4 )
+scale = Vector2( -1, 1 )
+polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Playfield/Walls/RightBumper"]
+position = Vector2( 8, -2 )
+scale = Vector2( -1, 1 )
+polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
+
+[node name="DeathZone" type="Area2D" parent="Playfield"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Playfield/DeathZone"]
+position = Vector2( 10, 631 )
+shape = SubResource( 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+margin_left = 134.0
+margin_top = 2321.0
+margin_right = 185.0
+margin_bottom = 2335.0
+text = "Score: 0"
+
+[node name="BallsLabel" type="Label" parent="HUD"]
+margin_left = 874.0
+margin_top = 2325.0
+margin_right = 921.0
+margin_bottom = 2339.0
+text = "Balls: 0"
+
+[connection signal="body_entered" from="Playfield/DeathZone" to="Playfield/DeathZone" method="_on_DeathZone_body_entered"]

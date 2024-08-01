@@ -1,0 +1,101 @@
+Number,Name,Description,Zone
+1,Magmorth,A serpentine creature made of flowing lava with obsidian scales,Volcanic Inferno
+2,Aquarion,A majestic water dragon with scales that shimmer like the ocean surface,Undersea Kingdom
+3,Zephyrix,An ethereal bird-like being composed of swirling winds and clouds,Sky Citadel
+4,Terravore,A bulky quadruped with a body of living stone and crystal growths,Crystal Caverns
+5,Mosshorn,A deer-like creature with bark-textured skin and a mossy coat,Enchanted Forest
+6,Sandstorm,A swirling vortex of sand that occasionally forms a humanoid shape,Desert Oasis
+7,Glacialisk,An imposing serpent made of translucent ice with glowing blue eyes,Frozen Tundra
+8,Rexcavator,A mechanical T-Rex with excavator arms and treads instead of legs,Prehistoric Jungle
+9,Phantomist,A ghostly figure composed of swirling mist with glowing eyes,Haunted Mansion
+10,Geodekin,A small humanoid creature with a body made of various colorful crystals,Crystal Caverns
+11,Floralfae,A delicate fairy-like being with flower petal wings and leafy skin,Enchanted Forest
+12,Umbrabeast,A quadruped made of pure darkness with stars twinkling in its fur,Cosmic Void
+13,Toxicritter,A small rodent-like creature that leaves a trail of glowing ooze,Mutant Sewers
+14,Mentallo,A floating brain encased in a transparent dome with multiple eyes,Psychic Realm
+15,Ironclad,A knight-like being made entirely of interlocking gears and pistons,Clockwork Citadel
+16,Soundwave,A translucent humanoid figure with visible sound waves rippling through its body,Harmonic Caverns
+17,Nebulite,A cloud-like entity with swirling cosmic gases and twinkling stars within,Cosmic Void
+18,Chronosaurus,A dinosaur-like creature with clock faces embedded in its scales,Temporal Rift
+19,Emberlisk,A basilisk-like creature with smoldering coal for scales and fiery eyes,Volcanic Inferno
+20,Tsunamoth,A gigantic moth with wings that create tidal waves when flapped,Undersea Kingdom
+21,Cyclonix,A tornado-like entity with arms and eyes visible in the swirling winds,Sky Citadel
+22,Rootrotter,A mass of twisted roots and vines in a vaguely humanoid shape,Enchanted Forest
+23,Dunerider,A camel-like creature with sail-like fins and sand-colored scales,Desert Oasis
+24,Polarwind,An arctic fox with a body that transitions from solid ice to blowing snow,Frozen Tundra
+25,Velocibyte,A velociraptor-like creature made of glowing circuitry and data streams,Cyberpunk Metropolis
+26,Spectralth,A shape-shifting specter that can pass through walls and possess objects,Haunted Mansion
+27,Amethystion,A lion-like creature with a mane of amethyst crystals and gemstone claws,Crystal Caverns
+28,Nectarling,A hummingbird-butterfly hybrid with a proboscis that can extend to incredible lengths,Enchanted Forest
+29,Shadowclaw,A panther-like being made of living shadows with glowing red eyes,Shadow Realm
+30,Solarbeam,A radiant humanoid figure composed of pure light and solar flares,Celestial Plane
+31,Venomantis,A praying mantis-like creature with venomous spikes and acid-dripping mandibles,Toxic Jungle
+32,Psychlops,A one-eyed giant with swirling patterns on its skin that induce hypnosis,Psychic Realm
+33,Steelix,A metallic snake-like being with a body made of interlocking steel plates,Industrial Wasteland
+34,Harmonix,A musical note-shaped creature that creates melodies as it moves,Harmonic Caverns
+35,Quasarquid,A squid-like entity with tentacles made of pure energy and a body like a distant galaxy,Cosmic Void
+36,Epoch-alypse,A four-armed humanoid with a different historical era represented in each limb,Temporal Rift
+37,Blazebeak,A phoenix-like bird with a beak of white-hot flame and feathers of embers,Volcanic Inferno
+38,Coralclaw,A crustacean with a shell made of living coral and bioluminescent appendages,Undersea Kingdom
+39,Gustclaw,An eagle-like creature with wings made of visible air currents,Sky Citadel
+40,Cactuspike,A mobile cactus with sharp needle projectiles and flowery appendages,Desert Oasis
+41,Blizzardeon,A yeti-like creature with fur that constantly sheds snowflakes,Frozen Tundra
+42,Trilobyte,A robotic trilobite with LED eyes and extendable antenna,Cyberpunk Metropolis
+43,Wraitheon,A ghost-like being that can possess and animate nearby objects,Haunted Mansion
+44,Quartzilla,A massive gorilla-like creature with a body made of various quartz crystals,Crystal Caverns
+45,Pollinator,A bee-like entity with flower petals for wings and a nectar-producing body,Enchanted Forest
+46,Gloomhound,A canine creature made of solidified darkness with glowing white spots like stars,Shadow Realm
+47,Prismascale,A fish-like being that refracts light through its scales creating rainbow patterns,Celestial Plane
+48,Sludgeon,A humanoid figure made of toxic sludge with glowing green eyes,Mutant Sewers
+49,Brainwave,A cloud-like entity in the shape of a brain with electrical synapses visible,Psychic Realm
+50,Magnetron,A robotic creature that can reshape its body using magnetic fields,Industrial Wasteland
+51,Deciboom,A bat-like creature that navigates using destructive sound waves,Harmonic Caverns
+52,Asteroidian,A rock-like being that floats and can separate into smaller asteroid-like pieces,Cosmic Void
+53,Futuregeist,A spectral figure that flickers between different potential future forms,Temporal Rift
+54,Infernog,A dog-like creature with a body of crackling flames and smoke,Volcanic Inferno
+55,Krakoon,A hybrid of a kraken and typhoon made of water and storm clouds,Undersea Kingdom
+56,Thunderwing,A dragonfly-like creature with wings of storm clouds and a lightning bolt body,Sky Citadel
+57,Fernfang,A saber-toothed tiger made of ferns and other prehistoric plants,Prehistoric Jungle
+58,Bansheek,A female spirit with a mouth that opens impossibly wide when wailing,Haunted Mansion
+59,Obsidian,A golem-like creature made of sharp obsidian shards that can reshape its body,Crystal Caverns
+60,Bumblefuzz,A large bumblebee-like creature with fuzzy pollen-covered body and flower-like antennae,Enchanted Forest
+61,Voidwalker,A humanoid silhouette filled with a window into deep space,Cosmic Void
+62,Miasmax,A gaseous creature that can change its toxicity and effects at will,Toxic Jungle
+63,Enigmaniac,A sphinx-like creature that poses riddles and transforms based on the answers,Psychic Realm
+64,Geargrind,A bear-like robot with gears for joints and a clock for a heart,Clockwork Citadel
+65,Echowl,An owl-like creature made of visible sound waves that can mimic any noise,Harmonic Caverns
+66,Blackholer,A dark spherical being that absorbs light and matter around it,Cosmic Void
+67,Paradoxapod,A creature that exists in multiple stages of its life cycle simultaneously,Temporal Rift
+68,Pyrocoatl,A feathered serpent with a body of dancing flames,Volcanic Inferno
+69,Jellyzap,A jellyfish-like creature that conducts electricity through its tentacles,Undersea Kingdom
+70,Nimbulon,A cloud-like being that can change weather patterns at will,Sky Citadel
+71,Scorchclaw,A scorpion-like creature with a sun-hot stinger and sandy exoskeleton,Desert Oasis
+72,Iciclaw,A saber-toothed cat made of ice with frost-breath and icicle fangs,Frozen Tundra
+73,Pixelton,A shapeshifting creature made of colorful voxels that can take any 8-bit form,Cyberpunk Metropolis
+74,Poltergeist,An invisible entity that can be seen only through the objects it possesses,Haunted Mansion
+75,Crystalix,A fox-like creature with a crystalline body that refracts light unpredictably,Crystal Caverns
+76,Honeyguard,A bear-like creature made of living honeycomb with bee minions,Enchanted Forest
+77,Nightshade,A plant-animal hybrid that blooms in darkness and wilts in light,Shadow Realm
+78,Luminoth,A moth-like creature with bioluminescent patterns that change color,Celestial Plane
+79,Contaminator,A blob-like being that assimilates and mutates anything it touches,Mutant Sewers
+80,Telepathine,A telepathic feline with multiple faces showing different emotions,Psychic Realm
+81,Chromeon,A chameleon-like robot that can change its metal composition at will,Industrial Wasteland
+82,Resonator,A crystalline humanoid that amplifies and shapes sound waves around it,Harmonic Caverns
+83,Nebulite,A conglomeration of cosmic gases loosely held in a humanoid shape,Cosmic Void
+84,Timewinder,A clock-faced serpent that can loop short segments of time,Temporal Rift
+85,Forestfire,A deer-like creature with a body of glowing embers and antlers of flame,Volcanic Inferno
+86,Abyssaloth,A bioluminescent anglerfish-humanoid hybrid from the deep sea,Undersea Kingdom
+87,Stratostrider,A long-legged avian that walks among the clouds,Sky Citadel
+88,Petrifern,A human-shaped collection of prehistoric plants that can fossilize at will,Prehistoric Jungle
+89,Ectoplasmold,A shape-shifting blob of ectoplasm that can mimic ghostly forms,Haunted Mansion
+90,Gemheart,A golem with a body of rough stone but a core of precious gems,Crystal Caverns
+91,Wispwillow,A tree-like being with branches of ghostly blue flames,Enchanted Forest
+92,Umbragon,A dragon made of pure darkness that breathes shadows,Shadow Realm
+93,Radiobloom,A sunflower-like creature that emits various forms of radiation,Toxic Jungle
+94,Mnemontaur,A minotaur-like being with maze-patterned skin that stores memories,Psychic Realm
+95,Cogwheel,A wheel-shaped robot that can reconfigure its cogs and gears,Clockwork Citadel
+96,Symphonix,A conductor-like entity that controls lesser music-based creatures,Harmonic Caverns
+97,Pulsaron,A star-like creature that rhythmically pulses with different colors and intensities,Cosmic Void
+98,Retrograde,A humanoid that ages backwards and can grant youth or age to others,Temporal Rift
+99,Quantumquid,A squid-like being that exists in multiple states simultaneously,Cosmic Void
+100,Chronoceros,A rhinoceros-like creature with clock-face eyes and time-altering horn,Temporal Rift
