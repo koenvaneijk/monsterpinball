@@ -4,6 +4,9 @@
 
 Monster Pinball is an innovative mobile game that combines classic pinball mechanics with monster collecting, RPG elements, and themed environments. Navigate pinballs through various elemental realms, hatch unique monsters, and experience dynamic, evolving pinball tables!
 
+## Requirements
+Godot Engine v3.5.3.stable.official [6c814135b]
+
 ## 🎮 Features
 
 - **Classic Pinball Mechanics**: Experience traditional flipper controls with a twist of elemental themes.

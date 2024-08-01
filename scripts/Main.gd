@@ -6,9 +6,10 @@ var ball_scene = preload("res://scenes/Ball.tscn")
 
 onready var score_label = $HUD/ScoreLabel
 onready var balls_label = $HUD/BallsLabel
-onready var ball_start = $Playfield/BallStart
+onready var ball_start = $Table/BallStart
 
 func _ready():
+	Physics2DServer.area_set_param(get_world_2d().get_space(), Physics2DServer.AREA_PARAM_GRAVITY, 800)
 	update_hud()
 	spawn_ball()
 
