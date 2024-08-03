@@ -74,7 +74,7 @@ visible = false
 polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
 
 [node name="SlingShot" parent="Table/Walls/LeftBottom" instance=ExtResource( 6 )]
-position = Vector2( -240.599, 890 )
+position = Vector2( -234.599, 884 )
 rotation = 1.10538
 points = 500
 
@@ -103,7 +103,7 @@ visible = false
 polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
 
 [node name="SlingShot" parent="Table/Walls/RightBottom" instance=ExtResource( 6 )]
-position = Vector2( -220.694, 886.807 )
+position = Vector2( -217.462, 880.813 )
 rotation = 4.2623
 scale = Vector2( 1, -1 )
 points = 500
