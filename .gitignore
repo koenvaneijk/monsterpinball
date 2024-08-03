@@ -50,3 +50,4 @@ build/
 !addons/**/*.import
 
 export
+.aider*

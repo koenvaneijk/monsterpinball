@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-export var flip_strength = 10000
-export var flip_angle = 45
+
+export var flip_angle = 70
 export(String, "left", "right") var flipper_side
 
 var rest_angle = 0
@@ -22,8 +22,3 @@ func _physics_process(delta):
 		current_angle = lerp(current_angle, rest_angle, 0.4)
 	
 	rotation_degrees = current_angle
-
-func _on_Flipper_body_entered(body):
-	if body.is_in_group("balls") and flipping:
-		print(body)
-		body.apply_impulse(Vector2.ZERO, Vector2.UP.rotated(rotation) * flip_strength)

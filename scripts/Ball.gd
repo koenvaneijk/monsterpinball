@@ -16,7 +16,7 @@ func _physics_process(delta):
 
 func _integrate_forces(state):
 	if not on_ramp:
-		var max_speed = 1000
+		var max_speed = 3000
 		if state.linear_velocity.length() > max_speed:
 			state.linear_velocity = state.linear_velocity.normalized() * max_speed
 
