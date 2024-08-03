@@ -12,7 +12,7 @@ colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 0 )
 [sub_resource type="GradientTexture2D" id=1]
 gradient = SubResource( 2 )
 width = 500
-height = 1920
+height = 2400
 
 [node name="Main" type="Node2D"]
 position = Vector2( 541, 1202 )
@@ -20,6 +20,7 @@ script = ExtResource( 4 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 position = Vector2( -523, -1192 )
+scale = Vector2( 1, 0.999121 )
 normal = SubResource( 1 )
 action = "flip_left"
 
@@ -33,32 +34,32 @@ action = "flip_right"
 [node name="Flippers" type="Node" parent="Table"]
 
 [node name="LeftFlipper" parent="Table/Flippers" instance=ExtResource( 1 )]
-position = Vector2( 406, 1667 )
+position = Vector2( 393, 2216 )
 scale = Vector2( -1, 1 )
 flipper_side = "left"
 
 [node name="RightFlipper" parent="Table/Flippers" instance=ExtResource( 1 )]
-position = Vector2( 696, 1667 )
+position = Vector2( 683, 2216 )
 flipper_side = "right"
 
 [node name="Bumpers" type="Node" parent="Table"]
 
 [node name="Bumper1" parent="Table/Bumpers" instance=ExtResource( 2 )]
-position = Vector2( 615.599, 476.146 )
+position = Vector2( 602.599, 1025.15 )
 
 [node name="Bumper2" parent="Table/Bumpers" instance=ExtResource( 2 )]
-position = Vector2( 444.599, 542.146 )
+position = Vector2( 431.599, 1091.15 )
 
 [node name="Bumper3" parent="Table/Bumpers" instance=ExtResource( 2 )]
-position = Vector2( 580.599, 661.146 )
+position = Vector2( 567.599, 1210.15 )
 
 [node name="BallStart" type="Position2D" parent="Table"]
-position = Vector2( 328, -40 )
+position = Vector2( 8, -346 )
 
 [node name="Walls" type="Node" parent="Table"]
 
 [node name="LeftBottom" type="StaticBody2D" parent="Table/Walls"]
-position = Vector2( 550.599, 543 )
+position = Vector2( 537.599, 1092 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Table/Walls/LeftBottom"]
 position = Vector2( -106, 960 )
@@ -70,7 +71,7 @@ visible = false
 polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
 
 [node name="Outline" type="StaticBody2D" parent="Table/Walls"]
-position = Vector2( 550.599, 543 )
+position = Vector2( 537.599, 1092 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Table/Walls/Outline"]
 polygon = PoolVector2Array( -67.599, 1313, -473, 1040, -473, 790, -464, 763, -449, 743, -422, 726, -369, 712, -365, 593, -360, 561, -350, 547, -333, 535, -361, 491, -401, 399, -443, 193, -456, 51, -451, -27, -388, -155, -271, -273, -61, -357, 167, -333, 320, -252, 440, -95, 457, 50, 441, 188, 379, 442, 329, 526, 341, 539, 354, 555, 365, 579, 362, 707, 401, 718, 440, 736, 448, 747, 456, 768, 466, 1046, 73.401, 1314, 537.401, 1318, 530, -538, -540, -538, -528.599, 1316 )
@@ -80,7 +81,7 @@ position = Vector2( -4, 0 )
 polygon = PoolVector2Array( -67.599, 1316, -473, 1040, -473, 790, -464, 763, -449, 743, -422, 726, -369, 712, -365, 593, -360, 561, -350, 547, -333, 535, -361, 491, -401, 399, -443, 193, -456, 51, -451, -27, -388, -155, -271, -273, -61, -357, 167, -333, 320, -252, 440, -95, 457, 50, 441, 188, 379, 442, 329, 526, 341, 539, 354, 555, 365, 579, 362, 707, 401, 718, 440, 736, 448, 747, 456, 768, 466, 1046, 76.401, 1315, 374.401, 1315, 542.401, 1318, 530, -538, -540, -538, -525.599, 1318 )
 
 [node name="RightBottom" type="StaticBody2D" parent="Table/Walls"]
-position = Vector2( 550.599, 543 )
+position = Vector2( 537.599, 1092 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
 
@@ -94,7 +95,7 @@ visible = false
 polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
 
 [node name="CenterArea" type="StaticBody2D" parent="Table/Walls"]
-position = Vector2( 539, 1201.85 )
+position = Vector2( 526, 1750.85 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Table/Walls/CenterArea"]
 polygon = PoolVector2Array( -315, -657, -347, -608, -347, -541, -343, -450, -325, -376, -301, -320, -256, -237, -219, -272, -281, -377, -315, -487, -322, -588 )
@@ -132,7 +133,7 @@ visible = false
 polygon = PoolVector2Array( 65, -927, 94, -929, 97, -860, 94, -847, 66, -845, 63, -858 )
 
 [node name="LeftBumper" type="StaticBody2D" parent="Table/Walls"]
-position = Vector2( 539, 1201.85 )
+position = Vector2( 526, 1750.85 )
 
 [node name="Polygon2D6" type="Polygon2D" parent="Table/Walls/LeftBumper"]
 polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
@@ -142,7 +143,7 @@ visible = false
 polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
 
 [node name="RightBumper" type="StaticBody2D" parent="Table/Walls"]
-position = Vector2( 539, 1201.85 )
+position = Vector2( 526, 1750.85 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Table/Walls/RightBumper"]
 position = Vector2( 8, -4 )
@@ -156,11 +157,12 @@ scale = Vector2( -1, 1 )
 polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
 
 [node name="DeathZone" parent="Table" instance=ExtResource( 3 )]
+position = Vector2( -13, 549 )
 
 [node name="Switches" type="Node" parent="Table"]
 
 [node name="Switch" parent="Table/Switches" instance=ExtResource( 5 )]
-position = Vector2( 321, 972 )
+position = Vector2( 308, 1521 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 scale = Vector2( 10, 10 )
