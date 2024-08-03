@@ -30,19 +30,11 @@ func exit_ramp(exit_velocity):
 	linear_velocity = exit_velocity
 
 func lost():
+	get_node("/root/Main")._on_ball_lost()
 	queue_free()
 
 func _on_body_entered(body):
 	if body.is_in_group("bumpers"):
 		var direction = (global_position - body.global_position).normalized()
 		apply_impulse(Vector2.ZERO, direction * body.bumper_strength)
-		print('bumper hit')
-		
-		var particles = $CPUParticles2D
-		particles.restart()
-		particles.emitting = true
-		
-		# Stop emitting after a short time
-		yield(get_tree().create_timer(0.1), "timeout")
-		particles.emitting = false
-
+		get_node("/root/Main").add_score(body.points)

@@ -54,7 +54,7 @@ position = Vector2( 431.599, 1091.15 )
 position = Vector2( 567.599, 1210.15 )
 
 [node name="BallStart" type="Position2D" parent="Table"]
-position = Vector2( 8, -346 )
+position = Vector2( -2, -98 )
 
 [node name="Walls" type="Node" parent="Table"]
 
@@ -157,7 +157,7 @@ scale = Vector2( -1, 1 )
 polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
 
 [node name="DeathZone" parent="Table" instance=ExtResource( 3 )]
-position = Vector2( -13, 549 )
+position = Vector2( -10, 657 )
 
 [node name="Switches" type="Node" parent="Table"]
 
@@ -176,8 +176,8 @@ margin_bottom = 17.4
 text = "Score: 0"
 
 [node name="BallsLabel" type="Label" parent="HUD"]
-margin_left = 58.3
-margin_top = 3.6
-margin_right = 105.3
-margin_bottom = 17.6
+margin_left = 2.6
+margin_top = 20.2
+margin_right = 49.6
+margin_bottom = 34.2
 text = "Balls: 0"

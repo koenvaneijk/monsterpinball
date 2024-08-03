@@ -33,7 +33,7 @@ func _on_ball_lost():
 	if balls_left > 0:
 		spawn_ball()
 	else:
-		print("Game Over!")
+		get_tree().change_scene("res://scenes/GameOver.tscn")
 
 func add_score(points):
 	score += points
