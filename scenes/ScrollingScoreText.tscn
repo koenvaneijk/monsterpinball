@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/ScrollingScoreText.gd" type="Script" id=1]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/Rubik-Regular.ttf"
@@ -9,59 +11,49 @@ font_data = SubResource( 1 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "ScrollUpAndFade"
+length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Label:anchor_top")
+tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 1 ),
+"times": PoolRealArray( 1, 1.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, -0.05 ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Label:modulate")
+tracks/1/path = NodePath("Label:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.5, 1 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
+"values": [ Vector2( -111, -36 ), Vector2( -111, -100 ) ]
 }
 
-[node name="ScrollingScoreText" type="CanvasLayer"]
+[node name="ScrollingScoreText" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-anchor_top = -0.05
-anchor_bottom = 0.521
 margin_left = -111.0
 margin_top = -36.0
 margin_right = 96.0
 margin_bottom = 40.0
+rect_pivot_offset = Vector2( 1.12e+07, 3.5e+06 )
 custom_fonts/font = SubResource( 2 )
 text = "10.000"
+align = 1
+valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "ScrollUpAndFade"
 playback_speed = 2.0
 anims/ScrollUpAndFade = SubResource( 3 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

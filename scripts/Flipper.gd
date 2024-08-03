@@ -11,7 +11,7 @@ var flipping = false
 func _ready():
 	rest_angle = rotation_degrees
 	if flipper_side == "left":
-		flip_angle = -flip_angle
+		flip_angle = 110
 
 func _physics_process(delta): 
 	if Input.is_action_pressed("flip_" + flipper_side):

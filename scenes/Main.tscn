@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Flipper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Bumper.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/DeathZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=4]
 [ext_resource path="res://scenes/Switch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/SlingShot.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 0 )
@@ -18,24 +19,26 @@ height = 2400
 position = Vector2( 541, 1202 )
 script = ExtResource( 4 )
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+[node name="LeftFlipperControl" type="TouchScreenButton" parent="."]
 position = Vector2( -523, -1192 )
 scale = Vector2( 1, 0.999121 )
 normal = SubResource( 1 )
 action = "flip_left"
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+[node name="RightFlipperControl" type="TouchScreenButton" parent="."]
 position = Vector2( 34, -1201 )
 normal = SubResource( 1 )
 action = "flip_right"
 
 [node name="Table" type="Node2D" parent="."]
 
-[node name="Flippers" type="Node" parent="Table"]
+[node name="Flippers" type="Node2D" parent="Table"]
+position = Vector2( -541, -1203 )
 
 [node name="LeftFlipper" parent="Table/Flippers" instance=ExtResource( 1 )]
 position = Vector2( 393, 2216 )
-scale = Vector2( -1, 1 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
 flipper_side = "left"
 
 [node name="RightFlipper" parent="Table/Flippers" instance=ExtResource( 1 )]
@@ -45,13 +48,13 @@ flipper_side = "right"
 [node name="Bumpers" type="Node" parent="Table"]
 
 [node name="Bumper1" parent="Table/Bumpers" instance=ExtResource( 2 )]
-position = Vector2( 602.599, 1025.15 )
+position = Vector2( 609, 1745 )
 
 [node name="Bumper2" parent="Table/Bumpers" instance=ExtResource( 2 )]
-position = Vector2( 431.599, 1091.15 )
+position = Vector2( 438, 1811 )
 
 [node name="Bumper3" parent="Table/Bumpers" instance=ExtResource( 2 )]
-position = Vector2( 567.599, 1210.15 )
+position = Vector2( 574, 1930 )
 
 [node name="BallStart" type="Position2D" parent="Table"]
 position = Vector2( -2, -98 )
@@ -69,6 +72,11 @@ polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table/Walls/LeftBottom"]
 visible = false
 polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
+
+[node name="SlingShot" parent="Table/Walls/LeftBottom" instance=ExtResource( 6 )]
+position = Vector2( -240.599, 890 )
+rotation = 1.10538
+points = 500
 
 [node name="Outline" type="StaticBody2D" parent="Table/Walls"]
 position = Vector2( 537.599, 1092 )
@@ -93,6 +101,12 @@ polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table/Walls/RightBottom"]
 visible = false
 polygon = PoolVector2Array( -388, 999, -177, 1140, -149, 1094, -364, 950, -367, 780, -390, 780 )
+
+[node name="SlingShot" parent="Table/Walls/RightBottom" instance=ExtResource( 6 )]
+position = Vector2( -220.694, 886.807 )
+rotation = 4.2623
+scale = Vector2( 1, -1 )
+points = 500
 
 [node name="CenterArea" type="StaticBody2D" parent="Table/Walls"]
 position = Vector2( 526, 1750.85 )
