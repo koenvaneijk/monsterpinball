@@ -4,8 +4,8 @@
 [ext_resource path="res://scenes/Bumper.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/DeathZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=4]
-[ext_resource path="res://scenes/Switch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/SlingShot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/Theme.tres" type="Theme" id=7]
 
 [sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 0, 0, 0, 0, 1, 1, 1, 0 )
@@ -45,7 +45,8 @@ flipper_side = "left"
 position = Vector2( 683, 2216 )
 flipper_side = "right"
 
-[node name="Bumpers" type="Node" parent="Table"]
+[node name="Bumpers" type="Node2D" parent="Table"]
+position = Vector2( -518, -1916 )
 
 [node name="Bumper1" parent="Table/Bumpers" instance=ExtResource( 2 )]
 position = Vector2( 609, 1745 )
@@ -59,7 +60,8 @@ position = Vector2( 574, 1930 )
 [node name="BallStart" type="Position2D" parent="Table"]
 position = Vector2( -2, -98 )
 
-[node name="Walls" type="Node" parent="Table"]
+[node name="Walls" type="Node2D" parent="Table"]
+position = Vector2( -540, -1202 )
 
 [node name="LeftBottom" type="StaticBody2D" parent="Table/Walls"]
 position = Vector2( 537.599, 1092 )
@@ -85,6 +87,7 @@ position = Vector2( 537.599, 1092 )
 polygon = PoolVector2Array( -67.599, 1313, -473, 1040, -473, 790, -464, 763, -449, 743, -422, 726, -369, 712, -365, 593, -360, 561, -350, 547, -333, 535, -361, 491, -401, 399, -443, 193, -456, 51, -451, -27, -388, -155, -271, -273, -61, -357, 167, -333, 320, -252, 440, -95, 457, 50, 441, 188, 379, 442, 329, 526, 341, 539, 354, 555, 365, 579, 362, 707, 401, 718, 440, 736, 448, 747, 456, 768, 466, 1046, 73.401, 1314, 537.401, 1318, 530, -538, -540, -538, -528.599, 1316 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table/Walls/Outline"]
+visible = false
 position = Vector2( -4, 0 )
 polygon = PoolVector2Array( -67.599, 1316, -473, 1040, -473, 790, -464, 763, -449, 743, -422, 726, -369, 712, -365, 593, -360, 561, -350, 547, -333, 535, -361, 491, -401, 399, -443, 193, -456, 51, -451, -27, -388, -155, -271, -273, -61, -357, 167, -333, 320, -252, 440, -95, 457, 50, 441, 188, 379, 442, 329, 526, 341, 539, 354, 555, 365, 579, 362, 707, 401, 718, 440, 736, 448, 747, 456, 768, 466, 1046, 76.401, 1315, 374.401, 1315, 542.401, 1318, 530, -538, -540, -538, -525.599, 1318 )
 
@@ -173,25 +176,20 @@ polygon = PoolVector2Array( -274, 145, -275, 247, -189, 317 )
 [node name="DeathZone" parent="Table" instance=ExtResource( 3 )]
 position = Vector2( -10, 657 )
 
-[node name="Switches" type="Node" parent="Table"]
-
-[node name="Switch" parent="Table/Switches" instance=ExtResource( 5 )]
-position = Vector2( 308, 1521 )
-
 [node name="HUD" type="CanvasLayer" parent="."]
-scale = Vector2( 10, 10 )
-transform = Transform2D( 10, 0, 0, 10, 0, 0 )
 
 [node name="ScoreLabel" type="Label" parent="HUD"]
 margin_left = 0.9
 margin_top = 3.4
 margin_right = 51.9
 margin_bottom = 17.4
+theme = ExtResource( 7 )
 text = "Score: 0"
 
 [node name="BallsLabel" type="Label" parent="HUD"]
-margin_left = 2.6
-margin_top = 20.2
-margin_right = 49.6
-margin_bottom = 34.2
+margin_left = 205.0
+margin_top = 225.0
+margin_right = 541.0
+margin_bottom = 344.0
+theme = ExtResource( 7 )
 text = "Balls: 0"

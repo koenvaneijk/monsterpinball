@@ -42,8 +42,3 @@ func add_score(points):
 	GameState.score += points
 	update_hud()
 
-func _on_Bumper_hit():
-	add_score(10)
-
-func _on_Ramp_completed():
-	add_score(50)
